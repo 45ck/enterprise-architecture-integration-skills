@@ -1,0 +1,175 @@
+{
+  "name": "enterprise-architecture-integration-pack",
+  "version": "0.1.0",
+  "type": "skill-pack",
+  "summary": "Enterprise architecture and integration pack for Claude Code-style workflows.",
+  "recommended_order": [
+    "enterprise-context-mapper",
+    "enterprise-domain-alignment-checker",
+    "application-landscape-mapper",
+    "soa-suitability-reviewer",
+    "service-contract-designer",
+    "loose-coupling-checker",
+    "message-bus-selector",
+    "publish-subscribe-designer",
+    "rpc-vs-message-pattern-selector",
+    "esb-fit-reviewer",
+    "orchestration-vs-choreography-reviewer",
+    "environment-topology-planner",
+    "container-vs-vm-advisor",
+    "ci-cd-readiness-checker",
+    "public-private-hybrid-cloud-selector"
+  ],
+  "skills": [
+    {
+      "id": "enterprise-context-mapper",
+      "path": "skills/enterprise-context-mapper/SKILL.md",
+      "purpose": "Map the enterprise context around a system including business units, upstream/downstream systems, actors, governance constraints, and external dependencies.",
+      "handoffs": [
+        "application-landscape-mapper",
+        "enterprise-domain-alignment-checker",
+        "environment-topology-planner"
+      ]
+    },
+    {
+      "id": "enterprise-domain-alignment-checker",
+      "path": "skills/enterprise-domain-alignment-checker/SKILL.md",
+      "purpose": "Check whether a proposed solution aligns with enterprise business, application, information, and infrastructure domains rather than optimizing only one layer.",
+      "handoffs": [
+        "soa-suitability-reviewer",
+        "environment-topology-planner",
+        "public-private-hybrid-cloud-selector"
+      ]
+    },
+    {
+      "id": "application-landscape-mapper",
+      "path": "skills/application-landscape-mapper/SKILL.md",
+      "purpose": "Describe the surrounding application landscape so ownership, overlap, integration points, and replacement candidates are explicit.",
+      "handoffs": [
+        "service-contract-designer",
+        "rpc-vs-message-pattern-selector",
+        "orchestration-vs-choreography-reviewer"
+      ]
+    },
+    {
+      "id": "soa-suitability-reviewer",
+      "path": "skills/soa-suitability-reviewer/SKILL.md",
+      "purpose": "Assess whether service-oriented patterns are justified for the system based on autonomy, reuse, integration needs, and operational cost.",
+      "handoffs": [
+        "service-contract-designer",
+        "esb-fit-reviewer",
+        "rpc-vs-message-pattern-selector"
+      ]
+    },
+    {
+      "id": "service-contract-designer",
+      "path": "skills/service-contract-designer/SKILL.md",
+      "purpose": "Define service contracts, responsibilities, data ownership, and interface expectations for enterprise integrations.",
+      "handoffs": [
+        "loose-coupling-checker",
+        "publish-subscribe-designer",
+        "ci-cd-readiness-checker"
+      ]
+    },
+    {
+      "id": "loose-coupling-checker",
+      "path": "skills/loose-coupling-checker/SKILL.md",
+      "purpose": "Review a design for coupling risks across services, teams, schemas, deployments, and runtime behavior.",
+      "handoffs": [
+        "rpc-vs-message-pattern-selector",
+        "publish-subscribe-designer",
+        "ci-cd-readiness-checker"
+      ]
+    },
+    {
+      "id": "message-bus-selector",
+      "path": "skills/message-bus-selector/SKILL.md",
+      "purpose": "Choose an appropriate message bus or event backbone pattern based on integration scale, latency, delivery guarantees, and governance.",
+      "handoffs": [
+        "publish-subscribe-designer",
+        "environment-topology-planner",
+        "ci-cd-readiness-checker"
+      ]
+    },
+    {
+      "id": "publish-subscribe-designer",
+      "path": "skills/publish-subscribe-designer/SKILL.md",
+      "purpose": "Design publish-subscribe interactions with explicit producers, consumers, events, topics, and failure handling.",
+      "handoffs": [
+        "message-bus-selector",
+        "loose-coupling-checker",
+        "environment-topology-planner"
+      ]
+    },
+    {
+      "id": "rpc-vs-message-pattern-selector",
+      "path": "skills/rpc-vs-message-pattern-selector/SKILL.md",
+      "purpose": "Decide whether synchronous RPC, asynchronous messaging, or a hybrid pattern best fits the integration context.",
+      "handoffs": [
+        "service-contract-designer",
+        "orchestration-vs-choreography-reviewer",
+        "loose-coupling-checker"
+      ]
+    },
+    {
+      "id": "esb-fit-reviewer",
+      "path": "skills/esb-fit-reviewer/SKILL.md",
+      "purpose": "Evaluate whether an enterprise service bus is a fit, an anti-fit, or an overreach for the system and organization.",
+      "handoffs": [
+        "message-bus-selector",
+        "service-contract-designer",
+        "environment-topology-planner"
+      ]
+    },
+    {
+      "id": "orchestration-vs-choreography-reviewer",
+      "path": "skills/orchestration-vs-choreography-reviewer/SKILL.md",
+      "purpose": "Review whether orchestration, choreography, or a mixed coordination model best suits cross-system workflows.",
+      "handoffs": [
+        "service-contract-designer",
+        "publish-subscribe-designer",
+        "environment-topology-planner"
+      ]
+    },
+    {
+      "id": "environment-topology-planner",
+      "path": "skills/environment-topology-planner/SKILL.md",
+      "purpose": "Plan enterprise environment topology across dev, test, staging, UAT, production, support, and disaster recovery needs.",
+      "handoffs": [
+        "container-vs-vm-advisor",
+        "ci-cd-readiness-checker",
+        "public-private-hybrid-cloud-selector"
+      ]
+    },
+    {
+      "id": "container-vs-vm-advisor",
+      "path": "skills/container-vs-vm-advisor/SKILL.md",
+      "purpose": "Advise when containers, virtual machines, or a mixed platform model are the safer enterprise choice.",
+      "handoffs": [
+        "environment-topology-planner",
+        "ci-cd-readiness-checker",
+        "public-private-hybrid-cloud-selector"
+      ]
+    },
+    {
+      "id": "ci-cd-readiness-checker",
+      "path": "skills/ci-cd-readiness-checker/SKILL.md",
+      "purpose": "Check whether architecture, environments, governance, and testing are ready for reliable CI/CD and controlled releases.",
+      "handoffs": [
+        "environment-topology-planner",
+        "container-vs-vm-advisor",
+        "public-private-hybrid-cloud-selector"
+      ]
+    },
+    {
+      "id": "public-private-hybrid-cloud-selector",
+      "path": "skills/public-private-hybrid-cloud-selector/SKILL.md",
+      "purpose": "Select between public, private, and hybrid cloud options with explicit attention to compliance, integration, latency, and operational realities.",
+      "handoffs": [
+        "environment-topology-planner",
+        "container-vs-vm-advisor",
+        "ci-cd-readiness-checker"
+      ]
+    }
+  ]
+}

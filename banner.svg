@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360">
+  <rect width="1200" height="360" fill="#5b21b6"/>
+  <circle cx="1030" cy="85" r="150" fill="#c4b5fd" opacity="0.14"/>
+  <text x="70" y="145" fill="#f5f3ff" font-family="Segoe UI, Arial, sans-serif" font-size="50" font-weight="700">enterprise-architecture-integration-skills</text>
+  <text x="70" y="205" fill="#ddd6fe" font-family="Segoe UI, Arial, sans-serif" font-size="24">Landscapes, service contracts, messaging patterns, topology, and cloud choices.</text>
+</svg>
