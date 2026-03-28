@@ -92,6 +92,12 @@ uninstall.sh                         global uninstaller
 LICENSE                              MIT
 ```
 
+## Related workflow agents
+
+- [software-architect](https://github.com/45ck/workflow-agents) - Own enterprise topology, boundaries, and integration choices
+- [system-modeler](https://github.com/45ck/workflow-agents) - Model cross-system flows and interactions
+- [delivery-manager](https://github.com/45ck/workflow-agents) - Coordinate rollout and migration planning
+
 ## Related skill packs
 
 - [business-analysis-skills](https://github.com/45ck/business-analysis-skills) - Business analysis techniques, workflows, and quality checks
